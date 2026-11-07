@@ -7,11 +7,12 @@
     overflow-y: auto;
     padding: 34px 4px 4px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     align-content: start;
   }
   .raum {
+    position: relative;
     box-sizing: border-box;
     min-height: 118px;
     padding: 14px 6px 12px;
@@ -28,9 +29,12 @@
     transition: background-color 0.15s;
   }
   .raum:active { background-color: rgba(127, 127, 127, 0.12); }
-  .icon { font-size: 30px; color: #43A047; margin-bottom: 4px; }
+  .icon { font-size: 30px; color: #03A9F4; margin-bottom: 4px; }
   .name { font-size: 15px; font-weight: 500; text-align: center; line-height: 1.2; overflow-wrap: anywhere; }
-  .info { font-size: 13px; opacity: 0.7; }
+  .info { position: absolute; top: 9px; left: 12px; font-size: 12px; opacity: 0.6; }
+  @media (min-width: 600px) {
+    #raster { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  }
 </style>
 <div id="raster"></div>
 <script>
