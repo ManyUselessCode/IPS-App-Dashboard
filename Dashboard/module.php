@@ -81,6 +81,12 @@ class Dashboard extends IPSModule
         return $raeume;
     }
 
+    private function Temperatur(int $variableID): string
+    {
+        // "20.80 °C" wird zu "20,8 °C"
+        return preg_replace('/(\d+)\.(\d)\d*/', '$1,$2', GetValueFormatted($variableID));
+    }
+
     private function Daten(): array
     {
         $daten = [];
@@ -90,7 +96,7 @@ class Dashboard extends IPSModule
                 'id'    => $raum['RaumID'],
                 'name'  => $objekt['ObjectName'],
                 'icon'  => $objekt['ObjectIcon'] != '' ? $objekt['ObjectIcon'] : self::ICON_ERSATZ,
-                'info'  => $raum['TemperaturID'] > 0 ? GetValueFormatted($raum['TemperaturID']) : ''
+                'info'  => $raum['TemperaturID'] > 0 ? $this->Temperatur($raum['TemperaturID']) : ''
             ];
         }
         return $daten;
