@@ -1,0 +1,17 @@
+{
+  "elements": [
+    {
+      "type": "List",
+      "name": "Raeume",
+      "caption": "Räume (Icon und Name kommen aus dem Raumordner)",
+      "rowCount": 10,
+      "add": true,
+      "delete": true,
+      "changeOrder": true,
+      "columns": [
+        { "caption": "Raum (Kategorie)", "name": "RaumID", "width": "50%", "add": 0, "edit": { "type": "SelectCategory" } },
+        { "caption": "Temperatur (Variable, optional)", "name": "TemperaturID", "width": "auto", "add": 0, "edit": { "type": "SelectVariable" } }
+      ]
+    }
+  ]
+}

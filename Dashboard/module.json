@@ -1,0 +1,11 @@
+{
+  "id": "{920114A2-A199-49DA-915E-D08944C0DF9E}",
+  "name": "Dashboard",
+  "type": 3,
+  "vendor": "",
+  "aliases": ["Dashboard"],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "DASH"
+}
