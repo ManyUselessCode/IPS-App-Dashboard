@@ -9,22 +9,22 @@
     scrollbar-width: thin;
     padding: 44px 4px 8px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     align-content: start;
   }
   .raum {
     position: relative;
     box-sizing: border-box;
-    min-height: 136px;
-    padding: 28px 8px 16px;
+    min-height: 112px;
+    padding: 16px 6px 14px;
     border-radius: 18px;
     background: rgba(120, 120, 128, 0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
@@ -44,18 +44,9 @@
     transition: transform 90ms ease-out, background-color 90ms ease-out;
   }
   .raum:focus-visible { box-shadow: 0 0 0 3px rgba(3, 169, 244, 0.5); }
-  .kreis {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: rgba(3, 169, 244, 0.14);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .icon { font-size: 30px; color: #03A9F4; }
+  .icon { font-size: 40px; color: #03A9F4; }
   .name {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: -0.01em;
     line-height: 1.2;
@@ -125,12 +116,9 @@
       }
     });
 
-    const kreis = document.createElement('div');
-    kreis.className = 'kreis';
     const icon = document.createElement('i');
     icon.className = 'icon fa-light fa-' + raum.icon;
-    kreis.appendChild(icon);
-    kachel.appendChild(kreis);
+    kachel.appendChild(icon);
 
     const name = document.createElement('div');
     name.className = 'name';
